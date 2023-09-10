@@ -1,0 +1,7 @@
+fastapi
+fire
+beautifulsoup4
+uvicorn
+requests-html
+webdriver-manager
+selenium
