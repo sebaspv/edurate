@@ -5,3 +5,4 @@ uvicorn
 requests-html
 webdriver-manager
 selenium
+sqlitedict

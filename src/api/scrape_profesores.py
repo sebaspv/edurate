@@ -43,13 +43,10 @@ def calificacion_profe(nombre, nombre_prof):
         gs_title_div = current_div.find('div', class_='gs-title')
         if gs_title_div:
             school_url = gs_title_div.find('a', class_='gs-title').get('data-ctorig')
-
+    print(school_url)
     driver.get(school_url)
     time.sleep(3)
     profesor = driver.page_source
     newsoup = BeautifulSoup(profesor, "html.parser")
     calificacion = newsoup.find('div', id='container').find('div', id='body').find('div', id='mainContent').find('div', class_='right-panel').find('div', class_='rating-breakdown').find('div', class_='left-breakdown').find('div', class_='breakdown-wrapper').find('div', class_='breakdown-header quality-header').find('div', class_='breakdown-container quality').find('div').find('div', class_='grade').text
     return {"calificación": float(calificacion)}
-
-
-print(calificacion_profe("ITESM Puebla", "Jorge Lozano Aponte"))

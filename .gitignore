@@ -162,3 +162,5 @@ src/api/google-chrome-stable_current_amd64.deb
 src/api/.python-version
 .python-version
 src/api/google-chrome-stable_current_amd64.deb.1
+profesores.sqlite
+profesores.sqlite-journal
